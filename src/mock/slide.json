@@ -1,0 +1,21 @@
+{"slider":[
+    {
+        "id":"",
+        "img_url":"https://ssl.quiksilver.com/static/RV/default/category-assets/experiences/1u_3D_cta/img/jpgs/us/221/BEN-JEANJEAN-1440x614-HPCAROUSELHERDER-DT.jpg",
+        "tema":"First slide label",
+        "descripcion":"imagen 1"
+    },
+    {
+        "id":"",
+        "img_url":"https://ssl.quiksilver.com/static/RV/default/category-assets/experiences/1u_3D_cta/img/jpgs/us/221/CURREN-TRUNKS-DESKTOP-HC-V3.jpg",
+        "tema":"Second slide label",
+        "descripcion":"imagen 2"
+    },
+    {
+        "id":"",
+        "img_url":"https://ssl.quiksilver.com/static/RV/default/category-assets/experiences/1u_3D_cta/img/jpgs/us/221/221_RVCA_Sport_CombatSeries_WB_NoText_DT_1440x614.jpg",
+        "tema":"Third slide label",
+        "descripcion":"Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+    }
+]
+}

@@ -1,0 +1,23 @@
+{"categorias":[
+    {
+        "id":"",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyzt00794_rvca,f_dtp_frt1.jpg",
+        "categoria":"Thanks"
+    },
+    {
+        "id":"",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyws00124_rvca,f_mdy_frt1.jpg",
+        "categoria":"Shorts"
+    },
+    {
+        "id":"",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyzt00222_rvca,f_plg0_frt1.jpg",
+        "categoria":"Camisas"
+    },
+    {
+        "id":"",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyha00238_rvca,f_alo_frt1.jpg",
+        "categoria":"Accesorios"
+    }
+]
+}

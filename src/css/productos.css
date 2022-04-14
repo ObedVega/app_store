@@ -1,0 +1,24 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 15px;
+}
+
+.img_p {
+    display: block; 
+    margin: 0px auto 10px; 
+    max-height: 200px;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    font-size: 10px;
+}
+.btn {
+    font-size: .765625rem;
+    text-transform: uppercase;
+}
+
+.btn-color {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}

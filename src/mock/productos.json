@@ -1,0 +1,53 @@
+{"productos":[
+    {
+        "id":"01",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyha00240_rvca,f_blk_frt1.jpg",
+        "name":"MATTY XXL BEANIE",
+        "price":"9.99",
+        "categoria":"Accesorios"
+    },
+    {
+        "id":"02",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/m1031rct_rvca,f_blk_frt1.jpg",
+        "name":"CURREN BOARDSHORTS 18",
+        "price":"9.99",
+        "categoria":"Shorts"
+    },
+    {
+        "id":"03",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyaa00168_rvca,l_ahz_frt1.jpg",
+        "name":"MUSHTOO TOWEL",
+        "price":"15.99",
+        "categoria":"Accesorios"
+    },
+    {
+        "id":"04",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/mahwwrvs_rvca,f_blt_frt1.jpg",
+        "name":"VA ALL THE WAY SNAPBACK HAT",
+        "price":"15.99",
+        "categoria":"Accesorios"
+    },
+    {
+        "id":"05",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyaa00181_rvca,f_blu_frt1.jpg",
+        "name":"2 PACK BASIC LOGO CREW SOCKS",
+        "price":"5.99",
+        "categoria":"Accesorios"
+    },
+    {
+        "id":"06",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avysf00143_rvca,f_nvh_frt1.jpg",
+        "name":"BIG RVCA PULLOVER HOODIE",
+        "price":"29.99",
+        "categoria":"Camisas"
+    },
+    {
+        "id":"07",
+        "img_url":"https://images.boardriders.com/globalGrey/rvca-products/all/default/medium-large/avyzt00222_rvca,f_plg0_frt1.jpg",
+        "name":"ANP LONG SLEEVE TEE",
+        "price":"14.99",
+        "categoria":"Camisas"
+    }
+    
+]
+}
