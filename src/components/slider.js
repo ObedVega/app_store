@@ -11,9 +11,7 @@ export const Slider = () => {
         <Carousel>
         {
         info.slider.map((val) =>(
-            
             <Carousel.Item >
-                <li key={val.id}></li>
                 <img  
                     className="d-block w-100"
                     src={val.img_url}

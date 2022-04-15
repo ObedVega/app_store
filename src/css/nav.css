@@ -1,0 +1,17 @@
+.color {
+    color: rgba(0,0,0,.55);
+    text-decoration: none;
+}
+
+@media (min-width: 992px){
+    .pad {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.pad{
+    display: block;
+    padding: ;
+}
