@@ -1,4 +1,5 @@
 import React, {useContext}  from "react";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/productos.css'
 import {CartContext} from '../components/context';
@@ -23,7 +24,13 @@ export const Productos = () => {
             <p >{val.name}</p>
             <h3 className="text-left" key={val.id}>${val.price}</h3>
             <div className="text-right">
-                <a className="btn btn-link btn-sm mr-2" key={val.id} href={`/products/${val.id}`}>Details</a>
+              
+                <Link 
+                            to={`/products/${val.id}`}
+                            className='btn btn-link btn-sm mr-2' 
+                        >
+                    Details
+                </Link>
   
                 <button className="btn btn-color btn-sm" onClick={()=>addToCarrito(articulo)}>Add to cart</button>
             </div>

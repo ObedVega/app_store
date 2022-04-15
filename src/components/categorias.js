@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/categorias.css'; 
 
@@ -18,7 +19,14 @@ export const Categorias = () => {
                         className=""
                         src={val.img_url}
                         alt="" />
-                    <h3 className="text-left"> <a href={`/products?category=${val.categoria}`}>{val.categoria}</a></h3>
+                    <h3 className="text-left">
+                        <Link 
+                            to={`/products?category=${val.categoria}`}
+                            className='color pad' 
+                        >
+                        {val.categoria}
+                        </Link>
+                    </h3>
                 </div>     
             ))
             }
