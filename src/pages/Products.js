@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
- 
+import '../css/productos.css';
 import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row";
 
@@ -23,7 +23,7 @@ export const Products = () => {
             category.categorias.map((val) =>(
                 <Link
                 to={`/products?category=${val.categoria}`}
-                className='p-2 link-secondary' 
+                className="p-2 link-secondary" 
             >
                 {val.categoria}
             </Link>  

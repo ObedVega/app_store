@@ -5,9 +5,12 @@ import { Layout } from "./pages/Layout";
 import { Home } from './pages/Home';
 import { Products } from "./pages/Products";
 import { ProductDetail } from "./pages/productDetail";
-//import { Admin } from './admin/Admin';
+import { Admin } from './admin/Admin';
 import { NoPage } from './pages/NoPage';
 import {Cart} from './pages/cart';
+import { Layout2 } from './admin/Layout2';
+import { Dashboard } from './admin/Dashboard';
+import { Test } from './admin/test';
 import {CartContext} from './components/context';
 
 function App() {
@@ -33,10 +36,16 @@ function App() {
               <Route path="cart" element={<Cart />} />
               <Route path="*" element={<NoPage />} />
             </Route>
+            <Route path="admin" element={<Admin />} />
+
+            <Route path="/" element={<Layout2 />}>
+              <Route index element={<Dashboard />} />
+              <Route path="Dashboard" element={<Dashboard />} />
+              <Route path="test" element={<Test />} />
+            </Route>
           </Routes>
         </BrowserRouter>
         </CartContext.Provider>
-    
       </>
   );
 }

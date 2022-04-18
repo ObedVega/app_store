@@ -1,14 +1,19 @@
 import React from 'react';
+//import { CartContext } from '../components/context';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/Container"; 
 import Row from "react-bootstrap/Row";
 import '../css/cart.css';
 
+
 export const Cart = () => {
 
-  
+ 
+   
   return (
+      
     <Container>
+
     <Row>
         <div className="text-center mt-5">
             <h1>Shopping Cart</h1>

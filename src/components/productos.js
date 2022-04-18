@@ -26,8 +26,8 @@ export const Productos = () => {
             <div className="text-right">
               
                 <Link 
-                            to={`/products/${val.id}`}
-                            className='btn btn-link btn-sm mr-2' 
+                    to={`/products/${val.id}`}
+                    className='p-2 link-secondary nodec' 
                         >
                     Details
                 </Link>

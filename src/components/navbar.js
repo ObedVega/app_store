@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container"; 
 import Nav from "react-bootstrap/Nav"; 
+import NavDropdown from "react-bootstrap/NavDropdown"; 
 import Form from "react-bootstrap/Form"; 
 import FormControl from "react-bootstrap/FormControl"; 
 import Button from "react-bootstrap/Button"; 
@@ -50,6 +51,14 @@ export const BarMenu = () => {
               >
                 Products
               </Link>
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <Link 
+                to="/admin"
+                className='color pad' 
+              >
+                Admin
+              </Link>
+              </NavDropdown>
             </Nav>
             <Form className="d-flex">
               <FormControl

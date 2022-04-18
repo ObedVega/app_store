@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/admin.css';
 
@@ -26,7 +27,12 @@ export const Admin = () => {
                 <input type="checkbox" value="remember-me"/> Remember me
                 </label>
             </div>
-            <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <Link 
+                to="/dashboard"
+                className='btn btn-lg btn-primary btn-block' 
+              >
+                Sign in
+              </Link>
             <p className="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
         </form>
       </>
