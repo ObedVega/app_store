@@ -10,8 +10,8 @@ import { NoPage } from './pages/NoPage';
 import {Cart} from './pages/cart';
 import { Layout2 } from './admin/Layout2';
 import { Dashboard } from './admin/Dashboard';
-import { Test } from './admin/test';
 import {CartContext} from './components/context';
+import { Productos } from './admin/Products';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -40,8 +40,8 @@ function App() {
 
             <Route path="/" element={<Layout2 />}>
               <Route index element={<Dashboard />} />
-              <Route path="Dashboard" element={<Dashboard />} />
-              <Route path="test" element={<Test />} />
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="productos" element={<Productos />} />
             </Route>
           </Routes>
         </BrowserRouter>
