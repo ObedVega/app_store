@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/productos.css'
 import {CartContext} from '../components/context';
-import prod from '../mock/productos.json';
-export const articulo = prod;
+//import prod from '../mock/productos.json';
+//export const articulo = prod;
  
 export const Productos = () => {
     const [Products, setProducts] = useState([])
@@ -20,6 +20,7 @@ export const Productos = () => {
     useEffect(() => {
       getData()
     }, [])
+    //export const articulo = prod;
     const {carrito, addToCarrito} = useContext(CartContext); 
     console.log(carrito);
 
@@ -45,7 +46,7 @@ export const Productos = () => {
                  >
                     Details
                   </Link>
-                  <button className="btn btn-color btn-sm" onClick={() => addToCarrito(articulo)}>Add to cart</button>
+                  <button className="btn btn-color btn-sm" onClick={() => addToCarrito(item)}>Add to cart</button>
                 </div>
             </div>        
         </>
