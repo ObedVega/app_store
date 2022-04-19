@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 export const Productos = () => {
     const [Products, setProducts] = useState([])
@@ -24,6 +25,14 @@ export const Productos = () => {
 
     return (
         <>
+        <div>
+          <Link 
+            to="/InsProducto"
+            className='' 
+          >
+            Agregar
+          </Link>
+        </div>
         <Table striped bordered hover size="sm">
         <thead>
             <tr>

@@ -12,6 +12,8 @@ import { Layout2 } from './admin/Layout2';
 import { Dashboard } from './admin/Dashboard';
 import {CartContext} from './components/context';
 import { Productos } from './admin/Products';
+import { InsProducto } from './admin/insProducto';
+import { Test } from './admin/test';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -42,6 +44,8 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="productos" element={<Productos />} />
+              <Route path="InsProducto" element={<InsProducto />} />
+              <Route path='Test' element={<Test/>}/>
             </Route>
           </Routes>
         </BrowserRouter>
