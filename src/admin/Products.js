@@ -18,10 +18,7 @@ export const Productos = () => {
     useEffect(() => {
       getData()
     }, [])
-    //console.log(Products);
-    //if(res){
-    //  return (<p>Cargando</p>);
-    //}
+    
 
     return (
         <>
@@ -30,7 +27,7 @@ export const Productos = () => {
             to="/test"
             className='' 
           >
-            Agregar
+            Agregar Producto
           </Link>
         </div>
         <Table striped bordered hover size="sm">
