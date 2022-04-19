@@ -27,7 +27,7 @@ export const Productos = () => {
         <>
         <div>
           <Link 
-            to="/InsProducto"
+            to="/test"
             className='' 
           >
             Agregar
