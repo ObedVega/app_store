@@ -13,8 +13,8 @@ export const Categorias = () => {
         <div className="row">
             <div className="grid">
             {
-            category.categorias.map((val) =>(
-                <div className="card card-body" key={val.id}>
+            category.categorias.map((val,i) =>(
+                <div className="card card-body" key={i}>
                     <img
                         className=""
                         src={val.img_url}

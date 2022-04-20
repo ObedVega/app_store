@@ -10,15 +10,15 @@ export const Slider = () => {
     return (
         <Carousel>
         {
-        info.slider.map((val) =>(
-            <Carousel.Item >
-                <img  
+        info.slider.map((val,i) =>(
+            <Carousel.Item key={i}>
+                <img 
                     className="d-block w-100"
                     src={val.img_url}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3 >{val.tema}</h3>
+                    <h3>{val.tema}</h3>
                     <p>{val.descripcion}</p>
                 </Carousel.Caption>
             </Carousel.Item>

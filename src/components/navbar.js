@@ -51,7 +51,7 @@ export const BarMenu = () => {
               >
                 Products
               </Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown title="Links" id="basic-nav-dropdown">
               <Link 
                 to="/admin"
                 className='color pad' 

@@ -20,10 +20,9 @@ export const Products = () => {
             <nav className="nav d-flex justify-content-between">
                 <a className="p-2 link-secondary" href="/products">All Products</a>
             {
-            category.categorias.map((val) =>(
+            category.categorias.map((val, i) =>(
                <>
-               <p key={val.id}>
-                   </p><Link
+                <Link key={i}
                     to={`/products?category=${val.categoria}`}
                     className="p-2 link-secondary"
                 >

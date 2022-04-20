@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import { Slider } from "../components/slider";
 import { Categorias } from "../components/categorias";
 import { Productos } from "../components/productos";
+import '../css/loading.css'
 
 export const Home = () => {
 

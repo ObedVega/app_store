@@ -9,11 +9,11 @@ export const Loading = () => {
     return (
     <>
     <div className="centered">
-    <Spinner animation="grow" variant="success" />
-    <Spinner animation="grow" variant="danger" />
-    <Spinner animation="grow" variant="warning" />
-    <Spinner animation="grow" variant="info" />
-    <Spinner animation="grow" variant="dark" />
+      <Spinner animation="grow" variant="success" />
+      <Spinner animation="grow" variant="danger" />
+      <Spinner animation="grow" variant="warning" />
+      <Spinner animation="grow" variant="info" />
+      <Spinner animation="grow" variant="dark" />
     </div>
     </>
     )

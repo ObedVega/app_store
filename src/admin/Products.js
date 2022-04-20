@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React  from 'react'
 import { Table } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import { useProducts } from '../api/useProducts';
+import { Loading } from '../components/loading';
 
 export const Productos = () => {
-    const [Products, setProducts] = useState([])
-    
 
-    const getData = () => {
+    const {data:dataProduct, isLoading:isLoadingProducts} = useProducts();
 
-        fetch('https://app-itj-bootcamp.herokuapp.com/getProducts')
-        .then((res) => res.json())
-        .then((res) => {
-          setProducts(res)
-        })
+    if(isLoadingProducts){
+      return (
+        <Loading/>
+      );
     }
-  
-    useEffect(() => {
-      getData()
-    }, [])
     
 
     return (
@@ -30,6 +25,7 @@ export const Productos = () => {
             Agregar Producto
           </Link>
         </div>
+        <br/>
         <Table striped bordered hover size="sm">
         <thead>
             <tr>
@@ -44,7 +40,7 @@ export const Productos = () => {
             </tr>
         </thead>
         <tbody>
-        {Products.map((item, i) => {
+        {dataProduct.map((item, i) => {
           return( 
           <tr key={i}>
             <td>{item.id}</td>

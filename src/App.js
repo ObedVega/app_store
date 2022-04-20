@@ -14,6 +14,8 @@ import {CartContext} from './components/context';
 import { Productos } from './admin/Products';
 import { InsProducto } from './admin/insProducto';
 import { Test } from './admin/test';
+import { Reset } from './admin/resetPassword';
+import { Cuenta } from './admin/crearCuenta';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -39,7 +41,8 @@ function App() {
               <Route path="*" element={<NoPage />} />
             </Route>
             <Route path="admin" element={<Admin />} />
-
+            <Route path='reset' element={<Reset/>}/>
+            <Route path='cuenta' element={<Cuenta/>}/>
             <Route path="/" element={<Layout2 />}>
               <Route index element={<Dashboard />} />
               <Route path="dashboard" element={<Dashboard />} />

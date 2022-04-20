@@ -5,16 +5,19 @@ import '../css/productos.css'
 import {CartContext} from '../components/context';
 import { useProducts } from "../api/useProducts";
 import { Loading } from "./loading";
+ 
 
 export const Productos = () => {
   const {carrito, addToCarrito} = useContext(CartContext); 
-  //alert(useProducts())
   const {data:dataProduct, isLoading:isLoadingProducts} = useProducts();
   const {search} = useLocation(); 
   
-  //console.log(dataProduct);
   if(isLoadingProducts){
-    return (<Loading/>);
+    return (
+    <div className="grid">
+      <Loading/>
+    </div>    
+    );
   }
 
   console.log(carrito);
@@ -39,14 +42,14 @@ export const Productos = () => {
         return( 
             <>
             <div key={i} className="card card-body">
-                <img
+                <img  
                   className="img-fluid img_p"
                   src={item.img_url}
                   alt="" />
                 <p>{item.name}</p>
                 <h3 className="text-left">${item.price}</h3>
                 <div className="text-right">
-                  <Link
+                  <Link key={item.id} 
                     to={`/products/${item.id}`}
                     className='p-2 link-secondary nodec'
                  >
