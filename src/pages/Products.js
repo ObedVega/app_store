@@ -21,12 +21,15 @@ export const Products = () => {
                 <a className="p-2 link-secondary" href="/products">All Products</a>
             {
             category.categorias.map((val) =>(
-                <Link
-                to={`/products?category=${val.categoria}`}
-                className="p-2 link-secondary" 
-            >
-                {val.categoria}
-            </Link>  
+               <>
+               <p key={val.id}>
+                   </p><Link
+                    to={`/products?category=${val.categoria}`}
+                    className="p-2 link-secondary"
+                >
+                    {val.categoria}
+                </Link>
+                </>  
             ))
             }   
             </nav>

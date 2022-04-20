@@ -1,35 +1,41 @@
-import React, {useContext, useState, useEffect }  from "react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/productos.css'
 import {CartContext} from '../components/context';
-//import prod from '../mock/productos.json';
-//export const articulo = prod;
- 
+import { useProducts } from "../api/useProducts";
+import { Loading } from "./loading";
+
 export const Productos = () => {
-    const [Products, setProducts] = useState([])
-    const getData = () => {
-
-        fetch('https://app-itj-bootcamp.herokuapp.com/getProducts')
-        .then((res) => res.json())
-        .then((res) => {
-          setProducts(res)
-        })
-    }
+  const {carrito, addToCarrito} = useContext(CartContext); 
+  //alert(useProducts())
+  const {data:dataProduct, isLoading:isLoadingProducts} = useProducts();
+  const {search} = useLocation(); 
   
-    useEffect(() => {
-      getData()
-    }, [])
-    //export const articulo = prod;
-    const {carrito, addToCarrito} = useContext(CartContext); 
-    console.log(carrito);
+  //console.log(dataProduct);
+  if(isLoadingProducts){
+    return (<Loading/>);
+  }
 
+  console.log(carrito);
 
-
-    return (
+  //Obtener query parameters
+  const queryParameter = new URLSearchParams(search);
+  const categoria = queryParameter.get('category');
+  let resultado;
+  if (categoria){
+    console.log(categoria);
+    resultado = dataProduct.filter(
+      prod => prod.categoria === categoria
+    ); 
+  } else {
+    resultado = dataProduct;
+  }
+ 
+  return (
     <>
     <div className="grid">
-    {Products.map((item, i) => {
+    {resultado.map((item, i) => {
         return( 
             <>
             <div key={i} className="card card-body">
