@@ -6,7 +6,7 @@ export function useDetailProducts(id) {
     isLoading: true,
   })
 
-  const getData = () => {
+  const getData = (id) => {
     fetch('https://app-itj-bootcamp.herokuapp.com/getProducto?id='+id)
       .then((res) => res.json())
       .then((res) => {
