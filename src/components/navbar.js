@@ -33,7 +33,12 @@ export const BarMenu = () => {
                 to="/home"
                 className='color pad' 
               >
-                STORE
+                <img 
+                  src="https://freepngimg.com/thumb/bear/89757-giant-head-bear-pandas-baby-logo-panda.png" 
+                  alt=""
+                  width="24" 
+                  height="24"
+                  />
               </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
