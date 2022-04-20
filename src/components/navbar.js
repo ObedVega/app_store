@@ -38,7 +38,7 @@ export const BarMenu = () => {
                   alt=""
                   width="24" 
                   height="24"
-                  />
+                  />Panda Style
               </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
