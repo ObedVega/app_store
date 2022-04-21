@@ -1,5 +1,5 @@
-import React, {useContext} from "react";
-import { Link } from "react-router-dom";
+import React, {useState, useContext} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import '../css/nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,9 +20,19 @@ import {CartContext} from "../components/context";
 const shoppingCart = <FontAwesomeIcon icon={faCartShopping} />
 
 export const BarMenu = () => {
-    const {carrito, setCarrito} = useContext(CartContext); 
-    if(setCarrito){
-      return (<p>Cargando</p>);
+  const [searchText, setSearchText] = useState("");  
+  const {carrito, setCarrito} = useContext(CartContext); 
+
+  let navigate = useNavigate();
+  const handleChange = (event) => {
+    setSearchText(event.target.value);
+  };
+  const onSubmit = (event) =>{
+    event.preventDefault();
+    navigate(`/search?q=${searchText}`);
+  };
+  if(setCarrito){
+    return (<p>Cargando</p>);
   }
     return (
       <>
@@ -38,7 +48,7 @@ export const BarMenu = () => {
                   alt=""
                   width="24" 
                   height="24"
-                  />Panda Style
+                  /> Panda Style
               </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -71,8 +81,9 @@ export const BarMenu = () => {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                onChange={handleChange}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button onClick={onSubmit} variant="outline-success">Search</Button>
             </Form>
             <Nav className="d-flex me-2"> 
               <Link 

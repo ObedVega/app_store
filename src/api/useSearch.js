@@ -1,15 +1,15 @@
 import  { useState, useEffect } from 'react'
 
-export function useDetailProducts(id) {
+export function useSearchText(text) {
 
-  const [detailProduct, setDetailProduct] = useState((id) => ({
+  const [detailProduct, setDetailProduct] = useState((text) => ({
     data: {},
     isLoading: true,
   }));
 
   useEffect(() => {
   const getData = () => {
-    fetch('https://app-itj-bootcamp.herokuapp.com/getProducto?id='+id)
+    fetch('https://app-itj-bootcamp.herokuapp.com/search?text='+text)
       .then((res) => res.json())
       .then((res) => {
         setDetailProduct({ data: res, isLoading: false })
@@ -18,7 +18,7 @@ export function useDetailProducts(id) {
 
 
     getData();
-  }, [id])
+  }, [text])
 
   return detailProduct
 }

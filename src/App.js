@@ -16,6 +16,8 @@ import { InsProducto } from './admin/insProducto';
 import { Test } from './admin/test';
 import { Reset } from './admin/resetPassword';
 import { Cuenta } from './admin/crearCuenta';
+import { SearchDetail } from './pages/searchDetail';
+import { Checkout } from './pages/Checkout';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -38,6 +40,8 @@ function App() {
               <Route path="products" element={<Products />} />
               <Route path="products/:id" element={<ProductDetail />} />
               <Route path="cart" element={<Cart />} />
+              <Route path="search" element={<SearchDetail/>}/>
+              <Route path="checkout" element={<Checkout/>}/>
               <Route path="*" element={<NoPage />} />
             </Route>
             <Route path="admin" element={<Admin />} />

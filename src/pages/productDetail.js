@@ -8,14 +8,14 @@ import { Loading } from "../components/loading";
 export const ProductDetail = () => {
     let { id } = useParams();
     const {data:dataProduct, isLoading:isLoadingProduct} = useDetailProducts(id);
-
-    if(!isLoadingProduct){
+ 
+    if(isLoadingProduct){
         return (
             <Container>
-            <Row>
-          <Loading/> 
-          </Row>
-          </Container>
+                <Row>
+                <Loading/> 
+                </Row>
+            </Container>
         );
       }
     return(
@@ -24,33 +24,30 @@ export const ProductDetail = () => {
             {dataProduct.map((item, i) => {
         return( 
             <>
-            <div  key={i} className="col-sm-7 p-3">
-             <img  
+            <div key={i} className="col-sm-7 p-3">
+                <img  
                   className="img-fluid img_p"
                   src={item.img_url}
                   alt="" />
             </div>
-                <div  key={i} className="col-sm-5 p-3">
-                        <h3 className="">
-                        {item.name}
-                        </h3>
-                      
-                    <div className="">
-                        $ {item.price}
-                    </div>
-                    <br/>
-                    <div className="">
-                        <button className="btn btn-color btn-sm">Add to cart</button>
-                    </div>
-                    <hr/>
-                    <div className="">
-                        Descripcion
-                    </div>
-                    <br/>
-                    <div className="">
-                        AN UPGRADED CLASSIC, THE VA ALL THE WAY SNAPBACK HAT TAKES IT UP A NOTCH WITH A MODERN FLAT BRIM AND RUBBERIZED LOGO AT THE FRONT PANEL. MADE FROM WOOL BLEND TWILL, THE MEN'S HAT IS FINISHED WITH A RVCA WOVEN LABEL AT THE ADJUSTABLE BACK.
-                    </div>
-                </div>    
+            <div key={item.id} className="col-sm-5 p-3">
+                <h3 className="">{item.name}</h3>
+                <div key={item.id} className="">
+                    $ {item.price}
+                </div>
+                <br/>
+                <div className="">
+                    <button className="btn btn-color btn-sm">Add to cart</button>
+                </div>
+                <hr/>
+                <div className="">
+                    Descripcion
+                </div>
+                <br/>
+                <div className="">
+                    AN UPGRADED CLASSIC, THE VA ALL THE WAY SNAPBACK HAT TAKES IT UP A NOTCH WITH A MODERN FLAT BRIM AND RUBBERIZED LOGO AT THE FRONT PANEL. MADE FROM WOOL BLEND TWILL, THE MEN'S HAT IS FINISHED WITH A RVCA WOVEN LABEL AT THE ADJUSTABLE BACK.
+                </div>
+            </div>    
         </>
 
         )

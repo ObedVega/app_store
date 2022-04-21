@@ -15,21 +15,13 @@ export const Footer = () => {
       <div className="col-6 col-md">
         <h5>Features</h5>
         <ul className="list-unstyled text-small">
-          <li><a className="text-muted" href="#a">Cool stuff</a></li>
-          <li><a className="text-muted" href="#a">Random feature</a></li>
-          <li><a className="text-muted" href="#a">Team feature</a></li>
-          <li><a className="text-muted" href="#a">Stuff for developers</a></li>
-          <li><a className="text-muted" href="#a">Another one</a></li>
-          <li><a className="text-muted" href="#a">Last time</a></li>
+          <li><a className="text-muted" href="#a">Blog</a></li>
         </ul>
       </div>
       <div className="col-6 col-md">
         <h5>Resources</h5>
         <ul className="list-unstyled text-small">
-          <li><a className="text-muted" href="#a">Resource</a></li>
-          <li><a className="text-muted" href="#a">Resource name</a></li>
-          <li><a className="text-muted" href="#a">Another resource</a></li>
-          <li><a className="text-muted" href="#a">Final resource</a></li>
+          <li><a className="text-muted" href="#a">News</a></li>
         </ul>
       </div>
       <div className="col-6 col-md">
@@ -37,8 +29,7 @@ export const Footer = () => {
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="#a">Team</a></li>
           <li><a className="text-muted" href="#a">Locations</a></li>
-          <li><a className="text-muted" href="#a">Privacy</a></li>
-          <li><a className="text-muted" href="#a">Terms</a></li>
+          <li><a className="text-muted" href="#a">Work With Us</a></li>
         </ul>
       </div>
     </div>
