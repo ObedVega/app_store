@@ -82,6 +82,7 @@ export const BarMenu = () => {
                 className="me-2"
                 aria-label="Search"
                 onChange={handleChange}
+                required
               />
               <Button onClick={onSubmit} variant="outline-success">Search</Button>
             </Form>

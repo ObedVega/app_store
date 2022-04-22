@@ -5,7 +5,7 @@ export function useProducts() {
     data: {},
     isLoading: true,
   })
-
+  useEffect(() => {
   const getData = () => {
     fetch('https://app-itj-bootcamp.herokuapp.com/getProducts')
       .then((res) => res.json())
@@ -14,7 +14,7 @@ export function useProducts() {
       })
   }
 
-  useEffect(() => {
+  
     getData()
   }, [])
 

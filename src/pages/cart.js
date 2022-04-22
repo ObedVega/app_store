@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { CartContext } from '../components/context';
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/Container"; 
 import Row from "react-bootstrap/Row";
@@ -85,7 +86,7 @@ export const Cart = () => {
                 <h3 className="m-0 txt-right">${sumTotal}</h3>
                 <hr className="my-4"/>
                 <div className="text-center">
-                    <a href="#a" className="btn btn-primary mb-2">CHECKOUT</a>
+                    <Link to="/checkout" className="btn btn-primary mb-2">CHECKOUT</Link> 
                     <button type="button" className="btn btn-outlineprimary btn-sm">CLEAR</button>
                 </div>
             </div>
