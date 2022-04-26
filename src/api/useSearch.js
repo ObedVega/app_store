@@ -9,7 +9,8 @@ export function useSearchText(text) {
 
   useEffect(() => {
   const getData = () => {
-    fetch('https://app-itj-bootcamp.herokuapp.com/search?text='+text)
+    //fetch('https://app-itj-bootcamp.herokuapp.com/search?text='+text)
+    fetch('https://app-itj-bootcamp.herokuapp.com/search/'+text)
       .then((res) => res.json())
       .then((res) => {
         setDetailProduct({ data: res, isLoading: false })
