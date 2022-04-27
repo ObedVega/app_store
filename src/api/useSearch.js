@@ -2,24 +2,22 @@ import  { useState, useEffect } from 'react'
 
 export function useSearchText(text) {
 
-  const [detailProduct, setDetailProduct] = useState((text) => ({
+  const [detailSearch, setDetailSearch] = useState((text) => ({
     data: {},
     isLoading: true,
   }));
 
   useEffect(() => {
-  const getData = () => {
-    //fetch('https://app-itj-bootcamp.herokuapp.com/search?text='+text)
-    fetch('https://app-itj-bootcamp.herokuapp.com/search/'+text)
+    const getData = () => {
+      fetch('https://app-itj-bootcamp.herokuapp.com/search?text='+text)
       .then((res) => res.json())
       .then((res) => {
-        setDetailProduct({ data: res, isLoading: false })
-      })
+        setDetailSearch({ data: res, isLoading: false })
+    })
   }
 
-
-    getData();
+  getData();
   }, [text])
 
-  return detailProduct
+  return detailSearch
 }

@@ -8,14 +8,13 @@ export function useDetailProducts(id) {
   }));
 
   useEffect(() => {
-  const getData = () => {
-    fetch('https://app-itj-bootcamp.herokuapp.com/getProducto?id='+id)
+    const getData = () => {
+      fetch('https://app-itj-bootcamp.herokuapp.com/getProducto?id='+id)
       .then((res) => res.json())
       .then((res) => {
         setDetailProduct({ data: res, isLoading: false })
       })
-  }
-
+    }
 
     getData();
   }, [id])
