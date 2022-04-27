@@ -11,6 +11,7 @@ export const SearchDetail = () => {
     const text = query.get('q');
     console.log(text);
     const {data, isLoading} = useSearchText(text);
+    
 
     console.log(data);
 
@@ -23,6 +24,7 @@ export const SearchDetail = () => {
         </Container>
         );
     }
+    //{data.map((item, i) => {  })}  
     return (
       <>
         <h1> Busqueda</h1>

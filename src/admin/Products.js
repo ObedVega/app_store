@@ -1,5 +1,4 @@
 import React  from 'react'
-import { Table } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { useProducts } from '../api/useProducts';
 import { Loading } from '../components/loading';
@@ -26,7 +25,8 @@ export const Productos = () => {
           </Link>
         </div>
         <br/>
-        <Table striped bordered hover size="sm">
+        <div className="table-responsive-sm">
+        <table className="table table-striped table-hover responsive">
         <thead>
             <tr>
                 <th>id</th>
@@ -55,8 +55,8 @@ export const Productos = () => {
           )
         })}
         </tbody>
-        </Table>
-
+        </table>
+        </div>
         </>
     )
   };
