@@ -48,14 +48,14 @@ export const Productos = () => {
                   alt="" />
                 <p>{item.name}</p>
                 <h3 className="text-left">${item.price}</h3>
-                <div className="text-right">
+                <div className="textRight">
                   <Link key={item.id} 
                     to={`/products/${item.id}`}
                     className='p-2 link-secondary nodec'
                  >
                     Details
                   </Link>
-                  <button className="btn btn-color btn-sm" onClick={() => addToCarrito(item)}>Add to cart</button>
+                  <button className="btn btn-color btn-sm mrigth-2" onClick={() => addToCarrito(item)}>Add to cart</button>
                 </div>
             </div>        
         </>

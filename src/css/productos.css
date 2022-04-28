@@ -27,7 +27,9 @@
     background-color: #1a1a1a;
     color:#fff;
 }
-
+.textRight {
+    text-align: right!important;
+}
 .nodec{
     text-decoration: none;
 }
